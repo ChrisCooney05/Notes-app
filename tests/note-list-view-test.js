@@ -10,8 +10,7 @@ function createsAHtmlStringWhenMethodIsCalled() {
   noteList.addNote("Hello There");
   var noteListView = new NoteListView(noteList);
   expect.isTrue(
-    console.log(noteListView.returnHtml())
-    noteListView.returnHtml() === "<ul><li><div>Hello There</div></li>"
+    noteListView.returnHtml() === `<ul><li><div>Hello There</div></li>`
   );
 }
 createsAHtmlStringWhenMethodIsCalled();
