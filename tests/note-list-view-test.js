@@ -7,10 +7,11 @@ constructsClassWithAnInstanceOfNoteList();
 
 function createsAHtmlStringWhenMethodIsCalled() {
   let noteList = new NoteList();
+  noteList.addNote("Hello There");
   var noteListView = new NoteListView(noteList);
   expect.isTrue(
-    noteListView.returnHtml() ===
-      "<ul><li><div>Favourite food: pesto</div></li>"
+    console.log(noteListView.returnHtml())
+    noteListView.returnHtml() === "<ul><li><div>Hello There</div></li>"
   );
 }
 createsAHtmlStringWhenMethodIsCalled();

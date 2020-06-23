@@ -4,7 +4,9 @@
   }
 
   NoteListView.prototype.returnHtml = function () {
-    return "<ul><li><div>Favourite food: pesto</div></li>";
+    this.noteList.returnNote().forEach(function (note) {
+      console.log(`<ul><li><div>${note.returnText()}</div></li>`);
+    });
   };
 
   exports.NoteListView = NoteListView;
