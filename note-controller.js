@@ -1,2 +1,9 @@
 let element = document.getElementById("app");
-element.innerHTML = "Howdy";
+
+(function () {
+  let noteList = new NoteList();
+  noteList.addNote("Favourite drink: seltzer");
+  let noteListView = new NoteListView(noteList);
+  console.log(noteListView.returnHtml());
+  element.innerHTML = noteListView.returnHtml();
+})();

@@ -4,7 +4,10 @@
   }
 
   NoteListView.prototype.returnHtml = function () {
-    return `<ul><li><div>Hello There</div></li>`;
+    let notes = this.noteList.returnNote();
+    notes.forEach(function (note) {
+      return `<ul><li><div>${note.returnText()}</div></li>`;
+    });
   };
 
   exports.NoteListView = NoteListView;
